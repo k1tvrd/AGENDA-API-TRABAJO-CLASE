@@ -1,0 +1,6 @@
+@AGENDA_API_TRABAJO_CLASE_HostAddress = http://localhost:5297
+
+GET {{AGENDA_API_TRABAJO_CLASE_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
