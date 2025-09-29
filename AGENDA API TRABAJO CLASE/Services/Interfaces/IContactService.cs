@@ -1,4 +1,6 @@
 ﻿using AgendaApi.Entities;
+using AgendaApi.Models.DTOs.Requests;
+using AgendaApi.Models.DTOs.Responses;
 
 namespace AgendaApi.Services.Interfaces
 {

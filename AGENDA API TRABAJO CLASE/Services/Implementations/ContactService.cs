@@ -7,10 +7,29 @@ namespace AgendaApi.Services.Implementations
 {
     public class ContactService : IContactService
     {
-        ContactDto Create(CreateAndUpdateContactDto dto, int loggedUserId);
-        void Delete(int id);
-        List<ContactDto> GetAllByUser(int id);
-        ContactDto? GetOneByUserId(int userId, int contactId);
-        void Update(Contact updatedContact, int contactId);
+        public ContactDto Create(CreateAndUpdateContactDto dto, int loggedUserId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<ContactDto> GetAllByUser(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ContactDto? GetOneByUserId(int userId, int contactId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(Contact updatedContact, int contactId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

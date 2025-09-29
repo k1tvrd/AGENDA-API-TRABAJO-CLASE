@@ -4,11 +4,11 @@ namespace AgendaApi.Entities
 {
     public class User
     {
-        int Id { get; set; }
-        string FirstName { get; set; }
-        string LastName { get; set; }
-        string Password { get; set; }
-        string Email { get; set; }
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Password { get; set; }
+        public string Email { get; set; }
         public State State { get; set; } = State.Active;
 
     }

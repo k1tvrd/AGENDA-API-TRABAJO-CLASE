@@ -1,5 +1,6 @@
-﻿namespace AgendaApi.Models.DTOs.Requests
-{
+﻿namespace AgendaApi.Models.DTOs.Requests;
+using System.ComponentModel.DataAnnotations;
+
     public class CreateAndUpdateUserDto
     {
         [Required]
@@ -8,8 +9,7 @@
 
        public string FirstName { get; set; }
        public string LastName { get; set; }
-       public string Email { get; set; }
        public string PhoneNumber { get; set; }
        public string Password { get; set; }
-    }
-}
+   }
+
