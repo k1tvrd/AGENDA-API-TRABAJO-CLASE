@@ -15,7 +15,8 @@ namespace AGENDA_API_TRABAJO_CLASE.Controllers
 
         [HttpPut("{userId}")]
         public IActionResult UpdateUser(CreateAndUpdateUserDto dto, int userId)
-        
+
+
         [HttpDelete]
         public IActionResult DeleteUser(int id)
 
