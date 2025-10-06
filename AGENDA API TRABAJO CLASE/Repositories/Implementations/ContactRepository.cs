@@ -1,4 +1,5 @@
 ﻿using AgendaApi.Entities;
+using AgendaApi.Models.DTOs.Responses;
 using AgendaApi.Repositories.Interfaces;
 using System.Diagnostics;
 using System.Runtime.Intrinsics.Arm;
@@ -11,17 +12,19 @@ namespace AgendaApi.Repositories.Implementations
         private static readonly List<Contact> _contacts = new List<Contact>{  //lista hardcodeada de contactos
         
 
-        new Contact { Id = 1, FirstName = "Juan", LastName = "Perez", Address = "Acevedo 123", Number = "123456789", Email = "JuanPerez@gmail.com" },
-        new Contact { Id = 2, FirstName = "Rodrigo", LastName = "Fernandez", Address = "JPaso 456", Number = "987654321", Email = "RodrigoFernandez@gmail.com" },
-        new Contact { Id = 3, FirstName = "Alejandra", LastName = "Gonzalez", Address = "Colombres 789", Number = "123451234", Email = "AlejandraGozalez@gmail.com" },
+        new Contact { Id = 1, FirstName = "Juan", LastName = "Perez", Address = "Acevedo 123", Number = "123456789", Email = "JuanPerez@gmail.com", UserId = 1},
+        new Contact { Id = 2, FirstName = "Rodrigo", LastName = "Fernandez", Address = "JPaso 456", Number = "987654321", Email = "RodrigoFernandez@gmail.com", UserId = 4},
+        new Contact { Id = 3, FirstName = "Alejandra", LastName = "Gonzalez", Address = "Colombres 789", Number = "123451234", Email = "AlejandraGozalez@gmail.com", UserId = 4},
 
     };
-        public void Create(Contact newContact) 
+        public Contact Create(Contact newContact) 
         {
             var nextId = _contacts.Count == 0 ? 1 : _contacts.Max(x => x.Id) + 1;
             newContact.Id = nextId;
 
             _contacts.Add(newContact);
+
+            return newContact;
         }
         //operador ternario (condición ? valorSiTrue : valorSiFalse)
         //Si la lista de contactos está vacía(_contacts.Count == 0), el próximo Id va a ser 1.

@@ -1,3 +1,5 @@
+using AgendaApi.Repositories.Implementations;
+using AgendaApi.Repositories.Interfaces;
 using AgendaApi.Services.Implementations;
 using AgendaApi.Services.Interfaces;
 
@@ -11,6 +13,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IContactService, ContactService>(); //por inyección de dependencias
 builder.Services.AddScoped<IUserService, UserService>(); //por inyección de dependencias
+builder.Services.AddScoped<IContactRepository, ContactRepository>(); //por inyección de dependencias
+builder.Services.AddScoped<IUserRepository, UserRepository>(); //por inyección de dependencias
+
 
 
 var app = builder.Build();

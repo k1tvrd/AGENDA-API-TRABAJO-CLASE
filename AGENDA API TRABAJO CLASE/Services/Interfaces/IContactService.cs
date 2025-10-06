@@ -10,6 +10,6 @@ namespace AgendaApi.Services.Interfaces
         void Delete(int id);
         List<ContactDto> GetAllByUser(int id);
         ContactDto? GetOneByUserId(int userId, int contactId);
-        void Update(Contact updatedContact, int contactId);
+        void Update(CreateAndUpdateContactDto dto, int contactId);
     }
 }

@@ -5,7 +5,7 @@ namespace AgendaApi.Repositories.Interfaces
     public interface IUserRepository
     {
         bool CheckifUserExists(int usarId);
-        int Create(User newUser);
+        User Create(User newUser);
         List<User> GetAll();
         User? GetById(int userId); 
         void RemoveUser(int userId);

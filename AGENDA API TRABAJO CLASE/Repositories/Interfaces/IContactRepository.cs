@@ -1,10 +1,11 @@
 ﻿using AgendaApi.Entities;
+using AgendaApi.Models.DTOs.Responses;
 
 namespace AgendaApi.Repositories.Interfaces
 {
     public interface IContactRepository
     {
-        void Create(Contact newContact);
+        Contact Create(Contact newContact);
         void Delete (int id);
         IEnumerable<Contact> GetAllByUser(int id);
         Contact? GetByContactId(int contactId);
